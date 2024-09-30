@@ -1,0 +1,89 @@
+.search{
+    height: 35px;
+    width: 70px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+.search:hover{
+    background: #006f88;
+    color: white;
+    border-color: #006f88;
+    transition: 0.3s;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    width: 359px;
+    height: 281px;
+    margin: 20px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-btn{
+    border: solid;
+    padding: 2px 15px;
+    border-radius: 20px;
+    border-color: black;
+    margin-top: 20px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.card-btn:hover{
+    transition: 0.3s;
+    border-color: #006f88;
+    background: #006f88;
+    color: white;
+}
+
+.save{
+    height: 33px;
+    width: 100px;
+    background: white;
+    color: #006f88;
+    border-width: 0.3px;
+    border-radius: 5px;
+    border-color: #006f88;
+    transition: 0.3s;
+}
+
+.save:hover{
+    background: #006f88;
+    color: white;
+    border-color: #006f88;
+    transition: 0.3s;
+}
+
+.more{
+    margin-left: 20px;
+    height: 33px;
+    width: 100px;
+    background: white;
+    color: #006f88;
+    border-width: 0.3px;
+    border-radius: 5px;
+    border-color: #006f88;
+    transition: 0.3s;
+}
+
+.more:hover{
+    background: #006f88;
+    color: white;
+    border-color: #006f88;
+    transition: 0.3s;
+}

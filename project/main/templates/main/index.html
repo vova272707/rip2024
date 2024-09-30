@@ -1,0 +1,40 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+<form style="font-family: 'Roboto', sans-serif; text-align: center; margin-top: 70px" action="{% url 'home_url' %}" method="GET" enctype="multipart/form-data">
+<!--    {% csrf_token %}-->
+    <input style="width: 800px; height: 35px; border-radius: 10px;" placeholder="Введите время записи..." name="time" type="text">
+    <input class="search" type="submit" value="Поиск" >
+</form>
+
+
+<h1 style="margin-top: 70px; margin-left: 100px; font-family: 'Roboto', sans-serif;">Доступное время записи</h1>
+<div style="margin-top: 10px;">
+    <ul style="display: grid; grid-template-columns: 440px 440px 440px; padding: 0; margin-left: 80px">
+        {% for time in data.timetable %}
+            <li class="card">
+                <img style="border-radius: 5px; width: 200px; height: 200px; margin: 0; padding: 20px 20px;" src="{{ time.pic }}" alt="time img">
+                    <a class="card-btn" href="{% url 'time_url' time.id %}">{{ time.title }}</a>
+            </li>
+        {% empty %}
+            <li style="font-family: 'Roboto', sans-serif; color: white">По Вашему поиску результатов не найдено</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div style="right: 15px; position: fixed; bottom: 10px;">
+    <a href="{% url 'basket_url' data.student_id %}" style="text-decoration: none;">
+        <img style="width: 60px; height: 60px;" src="http://127.0.0.1:9000/test/basket.png" alt="store icon">
+        <div style="display: inline-block; position: relative; text-align: center; width: 25px; height: 25px; border-radius: 50%; background: blue; border: 0.5px solid white; left: -30px; top: 20px">
+            <p style="font-family: 'Roboto', sans-serif; color: white; font-weight: bold; font-size: 16px">{{ data.count_time }}</p>
+        </div>
+    </a>
+</div>
+
+{% endblock %}

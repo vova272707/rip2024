@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ data.title }}
+{% endblock %}
+
+{% block content %}
+
+<div style="font-family: 'Roboto', sans-serif; color: white; margin-left: 100px; margin-top: 50px">
+    <h1 style="color: black; margin-bottom: 40px;">Время медосмотра: {{ data.title }}</h1>
+    <div style="border: solid; border-width: 1px; width: fit-content; padding: 10px; border-radius: 10px; background: #006f88;">
+        <h2>Полезная информация</h2>
+        <div style="width: 800px; margin-top: 10px;">
+            <img style="width: 350px; height: 230px; float: right; margin-left: 10px;"  src="{{ data.desc_pic }}">
+            <p style="width: 800px; font-size: 18px;">{{ data.desc }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
