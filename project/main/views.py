@@ -52,19 +52,19 @@ def time(request, id):
     _time = list(filter(lambda x: x['id'] == id, TIMETABLE))[0]
     title = _time['title']
     desc = _time['desc']
-    desc_pic = _time['desc_pic']
+    pic = _time['pic']
     return render(request, 'main/time.html', {'data' : {
         'title': title,
         'desc': desc,
-        'desc_pic': desc_pic,
+        'pic': pic,
         'id': id
     }})
 
-def basket(request, id):
+def student(request, id):
     group = STUDENTS[0]['group']
     full_name = STUDENTS[0]['full_name']
 
-    return render(request, 'main/basket.html', {'data' : {
+    return render(request, 'main/student.html', {'data' : {
         'timetable': TIMETABLE,
         'students': STUDENTS,
         'group': group,

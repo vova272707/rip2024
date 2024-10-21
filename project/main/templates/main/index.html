@@ -29,7 +29,7 @@
 </div>
 
 <div style="right: 15px; position: fixed; bottom: 10px;">
-    <a href="{% url 'basket_url' data.student_id %}" style="text-decoration: none;">
+    <a href="{% url 'student_url' data.student_id %}" style="text-decoration: none;">
         <img style="width: 60px; height: 60px;" src="http://127.0.0.1:9000/test/basket.png" alt="store icon">
         <div style="display: inline-block; position: relative; text-align: center; width: 25px; height: 25px; border-radius: 50%; background: blue; border: 0.5px solid white; left: -30px; top: 20px">
             <p style="font-family: 'Roboto', sans-serif; color: white; font-weight: bold; font-size: 16px">{{ data.count_time }}</p>
